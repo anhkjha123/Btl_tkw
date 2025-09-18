@@ -22,6 +22,78 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+.btn {
+  width: 174px;
+  height: auto;
+  background: #8aaf35;
+  border-radius: 0 100px 0 100px;
+  border: none;
+  cursor: pointer;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.break-all {
+  word-break: break-all;
+}
+/* =============top-bar============= */
+.top-bar {
+  background-color: rgba(80, 243, 91, 0.6);
+  width: 100%;
+}
+.top-bar.fixed {
+  z-index: 1;
+  position: fixed;
+  top: -28px;
+}
+.top-bar__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+.top-bar__logo {
+  height: 112px;
+}
+.top-bar__nav ul {
+  display: flex;
+  gap: 48px;
+}
+.top-bar__nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+}
+.top-bar__nav ul li a {
+  font-size: 1.8rem;
+  line-height: 156%;
+  color: white;
+  padding: 0;
+}
+.top-bar__nav ul li a:hover {
+  color: #ffeb3b;
+  transition: color 0.3s ease;
+}
+.top-bar ul li a.top-bar__cart:hover svg path {
+  fill: #ffeb3b;
+}
+.top-bar__cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.top-bar__nav ul li a svg {
+  height: calc(1.6rem * 1.6);
+  width: auto;
+  fill: currentColor;
+}
 /* =============header============= */
 .header {
   background-image: url(../img/bg-header.svg);
@@ -30,56 +102,6 @@ a {
   background-repeat: no-repeat;
   position: relative;
   margin-bottom: 180px;
-}
-.header__top {
-  background-color: rgba(80, 243, 91, 0.6);
-}
-.header__top.fixed {
-  z-index: 1;
-  position: sticky;
-  top: -28px;
-}
-.header__body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 36px 0 8px;
-}
-.header__logo {
-  height: 112px;
-}
-.header__nav ul {
-  display: flex;
-  gap: 48px;
-}
-.header__nav ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 8px;
-}
-.header__nav ul li a {
-  font-size: 1.8rem;
-  line-height: 156%;
-  color: white;
-  padding: 0;
-}
-.header__nav ul li a:hover {
-  color: #ffeb3b;
-  transition: color 0.3s ease;
-}
-.header__nav ul li a.header__cart:hover svg path {
-  fill: #ffeb3b;
-}
-.header__cart {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.header__nav ul li a svg {
-  height: calc(1.6rem * 1.6);
-  width: auto;
-  fill: currentColor;
 }
 .header__slogan {
   color: #8fb339;
@@ -105,4 +127,103 @@ a {
   font-family: var(--font-heading);
   font-size: 11rem;
   line-height: 130%;
+}
+/* =============about============= */
+/* left */
+.about {
+  padding-top: 59px;
+}
+.about__body {
+  display: flex;
+}
+.about__left {
+  max-width: 550px;
+  position: relative;
+}
+.about__left--us {
+  font-size: 1.8rem;
+  line-height: 83%;
+}
+.about__left--title {
+  font-family: var(--font-heading);
+  font-size: 4.2rem;
+  line-height: 140%;
+  color: #8fb339;
+  margin-top: 20px;
+}
+.about__left--desc {
+  font-size: 1.8rem;
+  line-height: 150%;
+  margin-top: 20px;
+}
+.about__btn--view-more {
+  display: flex;
+  font-size: 1.6rem;
+  line-height: 156%;
+  font-weight: 600;
+  margin-top: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+.about__btn--view-more::after {
+  content: " ";
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #de7835;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.about__btn--explore {
+  padding: 16px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: white;
+  margin-top: 20px;
+}
+.about__carrots {
+  position: absolute;
+  height: 382px;
+  right: -62px;
+  top: 264px;
+}
+.about__leaf {
+  position: absolute;
+  width: 96px;
+  z-index: -1;
+  bottom: -170px;
+  left: 290px;
+  transform: rotate(-96deg) scaleX(-1);
+}
+/* right */
+.about__right {
+  margin-left: 156px;
+}
+.about__cabbage {
+  display: flex;
+  position: relative;
+}
+.about__cabbage::before {
+  content: url(../img/leaf_2.svg);
+  width: 75px;
+  height: 236px;
+  position: absolute;
+  top: -65px;
+  left: -80px;
+  transform: rotate(-10deg);
+  z-index: -1;
+}
+.about__cabbage::after {
+  content: url(../img/leaf_2.svg);
+  width: 75px;
+  height: 236px;
+  position: absolute;
+  bottom: 19px;
+  right: -115px;
+  transform: rotate(175deg) scaleY(-1);
+  z-index: -1;
+}
+.about__cabbage img {
+  width: 651px;
+  height: 500px;
 }
