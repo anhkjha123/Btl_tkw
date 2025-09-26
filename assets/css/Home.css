@@ -618,3 +618,76 @@ a {
   background-color: #333333;
   cursor: auto;
 }
+
+/* =============Contact============= */
+.contact {
+  margin-top: 130px;
+}
+.contact__body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+.contact__img {
+  width: 100%;
+  height: calc(100% + 20px);
+  object-fit: cover;
+}
+.contact__time {
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+}
+.contact__location {
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+}
+.contact__time--icon {
+  position: absolute;
+  left: -30px;
+  top: 3px;
+}
+.contact__location--icon {
+  position: absolute;
+  left: -30px;
+  top: 3px;
+}
+.contact__title {
+  margin-top: 20px;
+}
+.contact__btn {
+  margin-top: 20px;
+  color: white;
+  padding: 16px 0;
+  text-align: center;
+}
+.contact__desc {
+  line-height: 150%;
+}
+/* =============Gallery============= */
+.gallery {
+  margin-top: 130px;
+}
+.gallery .main-content {
+  width: 100%;
+  margin: 0;
+}
+.gallery__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.gallery__body {
+  width: 268.5px;
+  height: 268.5px;
+}
+.gallery__img:nth-last-of-type(2n + 1) {
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__img:nth-last-of-type(2n) {
+  height: 52%;
+  object-fit: cover;
+}
